@@ -2,12 +2,13 @@ from pathlib import Path
 from typing import List, Tuple, Iterable
 
 
-def read_input(day: int) -> List[str]:
+def read_input(day: int, sample: bool = False) -> List[str]:
     """
     Reads the input file for a given day from ../input/dayXX.txt.
     Returns a list of lines.
     """
-    input_path = Path(__file__).parent.parent / "input" / f"day{day:02}.txt"
+    folder = "sample" if sample else "input"
+    input_path = Path(__file__).parent.parent / folder / f"day{day:02}.txt"
     return input_path.read_text().splitlines()
 
 def read_ints(day: int) -> List[int]:
