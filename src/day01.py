@@ -15,7 +15,6 @@ def part1():
 
 
 def part2():
-    instructions = read_input(1)
     dial = 50
     count = 0
     for inst in instructions:
